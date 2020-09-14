@@ -37,3 +37,5 @@ GROUP BY UniqueCarrier
 HAVING avgDelay > 10
 ORDER BY avgDelay DESC;
 
+--Nota: el promedio de retraso para las compañías EV y FL a mí me sale diferente que en el documento del enunciado, pero comprobandolo
+--con un select y exportandolo además en Excel, me aparece que mi resultado es el correcto...
