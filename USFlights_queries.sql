@@ -28,6 +28,12 @@ ORDER BY total_cancelled DESC, colYear ASC;
 SELECT TailNum, SUM(Distance) AS total_distance FROM flights 
 WHERE TailNum != "" 
 GROUP BY TailNum 
-ORDER BY total_distance DESC LIMIT 10
+ORDER BY total_distance DESC LIMIT 10;
 
+--7.Companyies amb el seu retard promig només d’aquelles les quals els seus vols arriben al seu destí
+--amb un retràs promig major de 10 minuts.
+SELECT UniqueCarrier, AVG(ArrDelay) AS avgDelay FROM flights 
+GROUP BY UniqueCarrier
+HAVING avgDelay > 10
+ORDER BY avgDelay DESC;
 
